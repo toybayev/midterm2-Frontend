@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!--  Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">WeatherApp</div>
+        <div class="search-bar">
+            <div class="input-wrapper">
+                <input id="city-input" class="city-input" type="text" placeholder="Search city...">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass" style="color: #748cf1"></i></button>
+            </div>
+        </div>
+        <button class="location-btn">
+            <i class="fa-solid fa-location-dot" style="color: #ffffff; margin-right: 10px"></i>
+               Current Location
+        </button>
+    </header>
+
+    <!-- App Container -->
+    <div class="current-weather">
+
+        <!-- Left Column -->
+        <div class="left-side">
+            <!-- Today Weather Summary -->
+            <div class="weather-summary">
+                <div class="weather-img">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                </div>
+                <div class="temperature">
+                    <div class="left-side-temp"><span class="value">___</span>&deg; <span class="unit-format">C</span></div>
+                    <p class="weathertext">___ ___</p>
+                </div>
+                <hr>
+                <div class="date-info">
+                    <p class="week-day">___</p>
+                    <p class="date">
+                        <i class="fas fa-calendar-alt"></i>
+                        ___ ___ ___
+                    </p>
+                </div>
+                <div class="location-info">
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ___ ___
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-side">
+
+            <div class="metric-type">
+                <input type="radio" id="celsius" name="temperature" value="celsius" checked>
+                <label for="celsius">Celsius (°C)</label>
+
+                <hr>
+
+                <input type="radio" id="fahrenheit" name="temperature" value="fahrenheit">
+                <label for="fahrenheit">Fahrenheit (°F)</label>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+                <div class="weather-info-box">
+                    <p class="title">Wind speed</p>
+                    <p class="value"><span class="wind">___</span> M/s</p>
+                </div>
+                <div class="weather-info-box">
+                    <p class="title">Humidity</p>
+                    <p class="value"><span class="humidity">___</span> %</p>
+                </div>
+                <div class="weather-info-box">
+                    <p class="title">Feels like</p>
+                    <p class="value feels-like"><span class="real-feel">___</span>&deg; C</p>
+                </div>
+                <div class="weather-info-box">
+                    <p class="title">Pressure</p>
+                    <p class="value"><span class="pressure">___</span> mbbar</p>
+                </div>
+                <div class="weather-info-box">
+                    <p class="title">Visibility</p>
+                    <p class="value"> <span class="visibility">___</span> m</p>
+                </div>
+
+                <div class="weather-info-box sunrise-card">
+                    <p class="title">Sun</p>
+                    <p>Rise <span class="sunrise">___</span></p>
+                    <p>Set <span class="sunset">___</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 5-Day Forecast -->
+    <section class="forecast-container">
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-grid">
+            <div class="forecast-day">
+                <div class="day">______</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                </div>
+                <div class="temp-high">High: ___°C</div>
+                <div class="temp-low">Low: ___°C</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">______</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                </div>
+                <div class="temp-high">High: ___°C</div>
+                <div class="temp-low">Low: ___°C</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">______</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                </div>
+                <div class="temp-high">High: ___°C</div>
+                <div class="temp-low">Low: ___°C</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">______</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                </div>
+                <div class="temp-high">High: ___°C</div>
+                <div class="temp-low">Low: ___°C</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day">______</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                ️</div>
+                <div class="temp-high">High: ___°C</div>
+                <div class="temp-low">Low: ___°C</div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

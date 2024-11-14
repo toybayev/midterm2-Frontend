@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 150px; /* Отступ для фиксированного хедера */
+    background-color: #f0f4f8;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #4b79a1, #283e51); /* Плавный градиент вместо однотонного цвета */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 30px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавлен эффект тени */
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.search-container {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 10px;
+    margin-top: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+#search-icon{
+    cursor: pointer;
+}
+#search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    color: #283e51;
+}
+.search-container i {
+    color: #4b79a1;
+    margin-left: 5px;
+}
+
+
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    color: #283e51;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+#favorites-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff6b6b; /* Ярко-красный для выделения */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+#favorites-btn:hover {
+    background: #e05656; /* Темный оттенок для эффекта при наведении */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+}
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.recipe-card {
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Более насыщенная тень */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.recipe-placeholder {
+    font-size: 50px;
+    color: #dfe6e9;
+    padding: 40px;
+}
+.recipe-card h3 {
+    font-size: 1.2em;
+    color: #4b79a1;
+}
+.recipe-card p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+.p-bottom{
+    /*position: fixed;*/
+    bottom: 0;
+}
+.recipe-card button {
+    padding: 10px;
+    background: #4b79a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+.recipe-card button:hover {
+    background: #3b5f7a;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    text-align: left;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.recipe-title,
+.recipe-instructions,
+.recipe-ingredients{
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -24px;
+    right: 0px;
+    font-size: 45px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff3333;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 476px){
+    .search-container{
+        width: 200px;
+        margin-right: 10px;
+    }
+    header{
+        padding: 20px 10px;
+    }
+}

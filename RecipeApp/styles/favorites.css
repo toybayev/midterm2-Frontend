@@ -1,0 +1,29 @@
+.back-btn {
+    display: block;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #4b79a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #3b5f7a;
+}
+
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#favorites-grid{
+    margin-top: 100px;
+}
+

@@ -97,15 +97,15 @@ Spoonacular Recipe API: This app uses the Spoonacular Recipe API to fetch recipe
 
 ![ 'loading state' first entrance](screenshots/recipe/recipeInitEntrance.png)
 
-![  ](screenshots/screenshots/recipe/recipeDesktopData.png)
-![  ](screenshots/screenshots/recipe/recipeModalData.png)
-![  ](screenshots/screenshots/recipe/recipeAddFavorite.png)
-![  ](screenshots/screenshots/recipe/recipeFavoritesPage.png)
+![  ](screenshots/recipe/recipeDesktopData.png)
+![  ](screenshots/recipe/recipeModalData.png)
+![  ](screenshots/recipe/recipeAddFavorite.png)
+![  ](screenshots/recipe/recipeFavoritesPage.png)
 
 
 ### Mobile version
 
-![  ](screenshots/screenshots/recipe/recipeMobile1)
+![  ](screenshots/recipe/recipeMobile1)
 
 
 

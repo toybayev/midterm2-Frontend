@@ -109,3 +109,42 @@ Spoonacular Recipe API: This app uses the Spoonacular Recipe API to fetch recipe
 
 
 
+#Movies App
+
+
+A web application that allows users to search for movies, view details, and create a personal watchlist for future viewing. The app uses TheMovieDatabase (TMDb) API to retrieve movie data, including details like cast, crew, and trailers.
+
+##Features
+1. Search Functionality
+Movie Search: Users can search for movies by entering the title of the movie.
+Auto-suggest: As the user types, suggestions appear to aid in faster and more accurate searches.
+2. Display Movies
+Grid Layout: Displays movies in a grid format, showcasing movie posters, titles, and release dates.
+Sorting Options: Users can sort movies by popularity, release date, or rating to personalize their browsing experience.
+3. Movie Details Page
+Detailed View: Clicking on a movie opens a modal or a new section with comprehensive information, including:
+Synopsis: Overview of the movie plot.
+Rating and Runtime: Shows the movie rating and length.
+Cast and Crew: Displays information about key actors and crew members.
+User Reviews: Optionally displays reviews from other viewers.
+Trailers or Clips: If available, includes trailers or clips of the movie.
+4. Watchlist Feature
+Add to Watchlist: Users can add movies to a "Watchlist" for easy access and future viewing.
+Persistent Storage: The watchlist is saved in local storage, allowing users to retain their selections even after refreshing the page.
+
+##API
+TheMovieDatabase (TMDb) API: This app uses the TMDb API to fetch movie data. Ensure you have an API key from TMDb to access the data.
+
+##Getting Started
+
+git clone https://github.com/toybayev/midterm2-Frontend.git
+Open Folder MoviesApp
+
+Run index.html to launch the app in your browser.
+
+##Screenshots
+Desktop version
+
+
+
+Mobile version

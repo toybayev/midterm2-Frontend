@@ -45,10 +45,67 @@ The application also supports toggling between Celsius and Fahrenheit for temper
 
 ![ EX Celcius Almaty weather ](screenshots/weatherDesktopMain.png)
 
-![ EX Fahrenheit Almaty weather ](screenshots/weatherDesktopFarehngeit.png)
+![ EX Fahrenheit Almaty weather ](screenshots/weatherDesktopFahrenheit.png)
+
+
+### Mobile version
 
 ![ Mobile adaptation ](screenshots/weatherMobile.png)
 ![  ](screenshots/weatherMobile2.png)
+
+
+
+#Recipe App
+
+A web application that allows users to search for recipes based on ingredients or dish names, view detailed recipe information, and save favorites for easy access later. The app uses the Spoonacular Recipe API to retrieve recipe data.
+
+##Features
+###1. Search Functionality
+Ingredient and Dish Search: Users can search for recipes by entering ingredients or dish names.
+Auto-suggest: As the user types, suggestions for recipe names appear to assist in faster and more accurate searches.
+###2. Display Recipes
+Recipe Grid Layout: Displays recipes in a grid layout with images, names, and preparation times.
+Recipe Card Details: Each recipe card includes a short description of the dish.
+###3. Recipe Details Page
+Detailed View: Clicking a recipe opens a modal or new section with:
+Ingredients: Shows ingredients with quantities.
+Instructions: Step-by-step cooking instructions.
+Nutritional Information: Displays calories, protein, fat, and other nutritional values.
+User Ratings and Reviews: Optionally shows user ratings and reviews.
+###4. Favorites Feature
+Save to Favorites: Users can save recipes to a "Favorites" list for quick access.
+Persistent Storage: Favorites are saved in local storage, allowing recipes to remain saved even after page refreshes.
+
+###API
+Spoonacular Recipe API: This app uses the Spoonacular Recipe API to fetch recipe data. Please ensure you have an API key from Spoonacular to access the recipe data.
+
+
+## Getting Started
+
+1. **Clone the Repository**: Start by cloning the repository to your local machine:
+   ```bash
+   git clone https://github.com/toybayev/midterm2-Frontend.git
+
+2. **Open Folder WeatherApp**
+
+3. **Run index.html**
+
+
+## Screenshots
+
+### Desktop version
+
+![ 'loading state' first entrance](screenshots/recipe/recipeInitEntrance.png)
+
+![  ](screenshots/screenshots/recipe/recipeDesktopData.png)
+![  ](screenshots/screenshots/recipe/recipeModalData.png)
+![  ](screenshots/screenshots/recipe/recipeAddFavorite.png)
+![  ](screenshots/screenshots/recipe/recipeFavoritesPage.png)
+
+
+### Mobile version
+
+![  ](screenshots/screenshots/recipe/recipeMobile1)
 
 
 

@@ -238,3 +238,62 @@ function updateTemperatureDisplay() {
 celsiusRadio.addEventListener("change", updateTemperatureDisplay);
 fahrenheitRadio.addEventListener("change", updateTemperatureDisplay);
 
+
+
+
+
+// Auto-suggestion
+
+
+
+let autoSuggestList = document.createElement("ul");
+autoSuggestList.classList.add("suggestion-list");
+document.querySelector(".input-wrapper").appendChild(autoSuggestList);
+
+
+function getCitySuggestions(query) {
+    let SUGGEST_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`;
+
+    fetch(SUGGEST_API_URL)
+        .then(response => response.json())
+        .then((data) => {
+            autoSuggestList.innerHTML = "";
+            autoSuggestList.style.display = data.length > 0 ? "block" : "none";
+
+            data.forEach((location) => {
+                let listItem = document.createElement("li");
+                listItem.textContent = `${location.name}, ${location.country}`;
+                listItem.classList.add("suggestion-item");
+
+                listItem.addEventListener("click", () => {
+                    cityInput.value = location.name;
+                    autoSuggestList.innerHTML = "";
+                    autoSuggestList.style.display = "none";
+                    getCityCoordinates();
+                });
+
+                autoSuggestList.appendChild(listItem);
+            });
+        })
+        .catch((error) => {
+            console.log("Failed to fetch city suggestions:", error);
+        });
+}
+
+// Событие ввода в поле поиска
+cityInput.addEventListener("input", function () {
+    let query = cityInput.value.trim();
+    if (query.length > 2) {
+        getCitySuggestions(query);
+    } else {
+        autoSuggestList.innerHTML = "";
+    }
+});
+
+
+// Hide auto-suggestion on click to page
+document.addEventListener("click", (event) => {
+    if (!document.querySelector(".input-wrapper").contains(event.target)) {
+        autoSuggestList.style.display = "none";
+    }
+});

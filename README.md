@@ -143,8 +143,15 @@ Open Folder MoviesApp
 Run index.html to launch the app in your browser.
 
 ##Screenshots
-Desktop version
+###Desktop version
 
+![ loading first init ](screenshots/moviesDesktop0.png)
+![  ](screenshots/movies/moviesDesktop1.png)
+![  ](screenshots/movies/moviesDesktop2.png)
+![  ](screenshots/movies/moviesDesktop3.png)
+![  ](screenshots/movies/moviesDektop4.png)
+![  ](screenshots/movies/moviesDesktop5.png)
 
+###Mobile version
 
-Mobile version
+![  ](screenshots/movies/moviesMobile.png)
